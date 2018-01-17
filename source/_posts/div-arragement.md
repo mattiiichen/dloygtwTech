@@ -57,7 +57,7 @@ div#main--content div.itemblock{
 {% endcodeblock %}
 
 {% codeblock lang:CSS CSS https://codepen.io/charisma/pen/zpmNzB CodePen %}
-/* 更改寬度為 330 px; */
+ 更改寬度為 330 px;
 div#main--content{
   width: 330px;
   height: 100%;
