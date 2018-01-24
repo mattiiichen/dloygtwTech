@@ -27,7 +27,8 @@ toc: true
 >expected worst-case space complexity is O(1).
 
 主要大意就是十進位轉二進位，Binary Gap的意思是 2 個 1 中間為零的個數有幾個。
-比如說 529 的二進位是1000010001，那Binary Gap是二個。
+比如說 529 的二進位是1000010001，那Binary Gap是二個，長度上分別一個是4，一個是3。
+所以要求做出一個函式，傳入一個正整數的參數，回傳最大長度的Binary Gap是長度多少。
 
 explode函數語法規則為：
 
