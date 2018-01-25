@@ -13,7 +13,7 @@ toc: true
 
 {% asset_img div-arrangement.PNG DIV 排列 %}
 
-
+<!--more-->
 {% codeblock lang:HTML HTML https://codepen.io/charisma/pen/zpmNzB CodePen %}
 <div id="main--content">
   <div class="itemblock"></div>

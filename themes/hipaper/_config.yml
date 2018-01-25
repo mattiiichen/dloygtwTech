@@ -30,8 +30,8 @@ avatar:
 
 
 # AboutPage background, support multiple images.
-about_big_image: [css/images/pose01.jpg, https://source.unsplash.com/collection/954550/1920x1080, https://source.unsplash.com/collection/954550/1920x1081]
-
+about_big_image: [css/images/iceland01.jpg,css/images/iceland02.jpg,css/images/iceland03.jpg,css/images/iceland04.jpg,css/images/iceland05.jpg]
+#css/images/pose01.jpg, https://source.unsplash.com/collection/954550/1920x1080, https://source.unsplash.com/collection/954550/1920x1081
 
 # Homepage thumbnail
 random_thumb: false

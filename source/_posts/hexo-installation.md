@@ -10,7 +10,7 @@ toc: true
 ---
 
 相關資源：[Hexo 博客搭建指南](https://github.com/limedroid/HexoLearning)
-
+<!--more-->
 {% codeblock %}
 $ npm install hexo-cli -g
 $ hexo init mattiiichen.github.io
