@@ -1,32 +1,17 @@
 ---
-title: Lesson 1 - Binary Gap
-date: 2018-01-19 12:08:18
+title: Lesson 1 - BinaryGap
+comments: false
+toc: true
+date: 2018-01-26 11:16:54
 tags:
   - Codility
 categories:
   - PHP
-comments: false
-toc: true
 ---
-二進位的GAP
+
+二進位的GAP。例如：數字 9 的二進位表示 1001。而 1001 包含 1 個 Binary Gap，並且長度為 2 。
+因為 1001 頭與尾的 1 中間有兩個連續 0 。
 <!--more-->
->原文題目：
->A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
-
->For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps.
-
->Write a function:
-
->function solution($N);
-
->that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
-
->For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
->Assume that:
->N is an integer within the range [1..2,147,483,647].
->Complexity:
->expected worst-case time complexity is O(log(N));
->expected worst-case space complexity is O(1).
 
 主要大意就是十進位轉二進位，Binary Gap的意思是 2 個 1 中間為零的個數有幾個。
 比如說 529 的二進位是1000010001，那Binary Gap是二個，長度上分別一個是4，一個是3。
@@ -46,14 +31,14 @@ PHP explode 函數有三個參數可以使用，分別解釋如下：
 比如： explode("a", "aBaCaDaE");
 輸出： Array ( [0] => [1] => B [2] => C [3] => D [4] => E ) NULL
 
-切下去的左右都會取出放在陣列裡。
+切下去的左右都會取出放在陣列裡，先拿左邊的，再拿右邊，拿過的就不會再拿了。
 
 Answer:
-{% codeblock lang:php PHP %}
+{% codeblock PHP的答案 lang:php http://www.writephponline.com/ PHP Online %}
 function solution($N) {
     // write your code in PHP5.5
-    $binary = decbin($N);
-    $zero_ary = explode('1', trim($binary, '0'));
+    $binary = decbin($N);   //十位進轉二位進函數
+    $zero_ary = explode('1', trim($binary, '0'));//二進位數的前後要拿掉，再以 1 分割至陣列
     $max = 0;
     foreach ($zero_ary as $i => $zero_string)
     {
