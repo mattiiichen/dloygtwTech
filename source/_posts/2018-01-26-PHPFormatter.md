@@ -28,3 +28,8 @@ Eric Allman 於 sendmail 中所使用的寫碼風格，Allman 與柏克萊(Berke
 4. **GNU style**
 與 Allman 風格極為類似，唯一的差異是在於換行後的大刮號有前置空白。
 5. **PEAR style**
+
+
+{% codeblock 對PHP array作格式化 lang:php http://www.writephponline.com/ PHP Online %}
+echo "<pre>" . print_r($array, true) . "</pre>";
+{% endcodeblock %}	
