@@ -34,7 +34,7 @@ function solution($N, $A) {
             if (isset($B[$A[$i] - 1])) {
                 if ($B[$A[$i] - 1] > $max_counter) $B[$A[$i] - 1] ++;
                 else $B[$A[$i] - 1] = $max_counter + 1;
-                if ($B[$A[$i] - 1] > $max_value) $max_value = $B[$A[$i] - 1];
+                if ($B[$A[$i] - 1] > $max_value) $max_value = $B[$A[$i] - 1];//更新最大的值
             }
         }
         // var_dump($max_counter);
@@ -54,3 +54,16 @@ $A = array(3, 4, 4, 6, 1, 4, 4);
 echo "<pre>".print_r(solution($N, $A), true)."</pre>";
 //print_r(solution($N,$A));
 {% endcodeblock %}	
+
+
+|  B陣列 | 0 | 0 | 0 | 0 | 0 | Max_Counter | Max_Value |
+|:------:|:-:|:-:|:-:|:-:|:-:|:-----------:|:---------:|
+|        | 0 | 0 | 0 | 0 | 0 |      0      |     0     |
+|   A3   | 0 | 0 | 1 | 0 | 0 |      0      |     1     |
+|   A4   | 0 | 0 | 1 | 1 | 0 |      0      |     1     |
+|   A4   | 0 | 0 | 1 | 2 | 0 |      0      |     2     |
+|   A6   | 0 | 0 | 1 | 2 | 0 |      2      |     2     |
+|   A1   | 3 | 0 | 1 | 2 | 0 |      2      |     3     |
+|   A4   | 3 | 0 | 1 | 3 | 0 |      2      |     3     |
+|   A4   | 3 | 0 | 1 | 4 | 0 |      2      |     4     |
+| Result | 3 | 2 | 2 | 4 | 2 |             |           |
