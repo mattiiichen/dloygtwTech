@@ -12,7 +12,7 @@ toc: true
 可以使用的指令
 <!-- more -->
 ***
-#### 使用指令清楚、生成、啟動、怖署
+#### 使用指令清除、生成、啟動、怖署
 {% codeblock %}
 $ hexo clean
 $ hexo g 
